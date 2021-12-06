@@ -3,20 +3,27 @@
 from random import randint
 
 
-def f(T, S, ndx_sum):
-    if S == ndx_sum:
-        return True
-    for i in range(len(T) - 1):
+def f(T, S, ndx_sum, step):
+    for i in range(len(T)):
         if T[i] >= 0:
-            T[i] *= -1
-            next_S = S + T[i]
+            next_S = T[i] + S
             next_ndx_sum = ndx_sum + i
-            if f(T, next_S, next_ndx_sum):
+            if next_S == next_ndx_sum:
+                print(next_S, step)
                 return True
+    for i in range(len(T)):
+        if T[i] >= 0:
+            next_S = T[i] + S
+            next_ndx_sum = ndx_sum + i
+            T[i] *= -1
+            if f(T, next_S, next_ndx_sum, step + 1):
+                return True
+            T[i] *= -1
     return False
 
 
 N = 10
-A = [randint(1, 10) for _ in range(N)]
+A = [5, 10, 20, 30, 99, 0]
 print(*A)
-f(A, 0, 0)
+if not f(A, 0, 0, 1):
+    print("NIE")
