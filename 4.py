@@ -28,6 +28,7 @@ def knight_step(T, pos, step, L):
                 return True
     if flag:
         T[pos[0]][pos[1]] = 0
+    return False
 
 
 knight(6, [0, 0])
