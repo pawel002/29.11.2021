@@ -15,10 +15,6 @@ def f(T, S, ndx_sum):
                 return True
     return False
 
-<<<<<<< HEAD
-LOL = 12
-=======
->>>>>>> 2b5f456b41daafeedd0ccf6eeba47741e15a0c59
 
 N = 10
 A = [randint(1, 10) for _ in range(N)]
