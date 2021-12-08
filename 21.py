@@ -9,4 +9,4 @@ def subset(T, S):
             for col in possibleCols:
                 if col > 0:
                     if T[row][col] < S:
-
+                        pass
