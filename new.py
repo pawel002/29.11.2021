@@ -74,10 +74,3 @@ def col_sum(Arr, col):
         sum += Arr[i][col]
     return sum
 
-
-
-
-
-
-print(NWD(25, 10))
-print(NWW(25, 10))
