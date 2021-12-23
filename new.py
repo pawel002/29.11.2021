@@ -74,3 +74,35 @@ def col_sum(Arr, col):
         sum += Arr[i][col]
     return sum
 
+
+def bulbs(A):
+    L = len(A)
+    count = 0
+    for i in range(L - 1):
+        if A[i] != A[i + 1]:
+            count += 1
+    return count
+
+
+def solve(A):
+    A.sort(key=lambda x: x[1])
+    return recursion(A, 0, 0,)
+
+
+def recursion(A: list, idx, elements, end=0):
+    if idx == len(A):
+        return elements
+    C = 0
+    if A[idx][0] > end:
+        C = recursion(A, idx + 1, elements + 1, A[idx][1])
+    B = recursion(A, idx + 1, elements, end)
+    return max(C, B)
+
+
+Arr = [
+    [1, 4],
+    [2, 3],
+    [4, 6],
+    [8, 9],
+]
+print(-1 % 5)
