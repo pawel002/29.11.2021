@@ -1,3 +1,2 @@
 # 29.11.2021
-WDI 29.22.2021
-ROZWIĄZANIA WDI Z 29.11.2021
+Solutions to WDI (Introduction to CS) excercises
